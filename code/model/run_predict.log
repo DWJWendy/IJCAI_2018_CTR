@@ -1,0 +1,20 @@
+2018-04-22 15:35:40.337927: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2018-04-22 15:35:41.271366: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.62
+pciBusID: 0000:02:00.0
+totalMemory: 10.91GiB freeMemory: 10.75GiB
+2018-04-22 15:35:41.271399: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1120] Creating TensorFlow device (/device:GPU:0) -> (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:02:00.0, compute capability: 6.1)
+/usr/local/lib/python3.5/dist-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+INFO:tensorflow:Restoring parameters from ../../data/model/cnn_model.ckpt
+INFO:tensorflow:Restoring parameters from ../../data/model/cnn_model.ckpt
+cnn_model_predict.py:61: FutureWarning: reshape is deprecated and will raise in a subsequent release. Please use .values.reshape(...) instead
+  label_data = onehot_model.fit_transform(label_data.reshape([-1, 1])).toarray()
+正在载入模型...
+数据处理中...
+(47813, 11088)
+(47814, 11088)
+(47814, 2)
+正在对测试数据进行测试...
+validation set func_loss: 0.046640914
+正在对比赛数据进行预测...
