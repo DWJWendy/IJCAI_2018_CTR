@@ -16,7 +16,7 @@
 
 评估指标
 
-![评估指标](/home/dwj2/DWJWendy.github.io/images/blog/2018-05-02-1.png  "评估指标"){:height="50%" width="50%"}
+![评估指标](/images/blog/2018-05-02-1.png  "评估指标"){:height="50%" width="50%"}
 通过logarithmic loss（记为logloss）评估模型效果（越小越好）， 公式如下：
 其中N表示测试集样本数量，yi表示测试集中第i个样本的真实标签，pi表示第i个样本的预估转化率。
 ---
@@ -125,19 +125,19 @@
 ---
 
 - 1.转化分布
-![转化分布](/home/dwj2/DWJWendy.github.io/images/blog/1.is_trade.png){:height="50%" width="50%"}
+![转化分布](/images/blog/1.is_trade.png){:height="50%" width="50%"}
 从上图可以明显看出在给定情景下转化率很低，也就是说，**我们的训练数据存在了极度平衡的现象，甚至是可以把购买理解成异常值，我们的算法要能够极好的检测出异常实例。**
 
 ---
 - 2.年龄 | 性别 | 星级 分布
-![年龄分布](/home/dwj2/DWJWendy.github.io/images/blog/2.user_age_level.png){:height="50%" width="50%"}![用户星级](/home/dwj2/DWJWendy.github.io/images/blog/5.user_star_level.png){:height="50%" width="50%"}
+![年龄分布](/images/blog/2.user_age_level.png){:height="50%" width="50%"}![用户星级](/images/blog/5.user_star_level.png){:height="50%" width="50%"}
 从图1可以明显看出，**年龄越大，转化率先增加后减少**（-1表示未知年龄），这个结果与我们常识一致，中间年龄段更具有消费能力， 性别转化分布没有贴出来，结果跟我们常识也是一致的，**女性转化率高于男性**。从图2中可以看出，星级越高购买率相对要更高一些，但是差距不太明显。
 
 ---
 
 - 3.价格 | 收藏 |展示 分布
 
-![价格分布](/home/dwj2/DWJWendy.github.io/images/blog/7.item_sales_level.png){:height="50%" width="50%"}![收藏分布](/home/dwj2/DWJWendy.github.io/images/blog/8.item_collected_level.png){:height="50%" width="50%"}![展示分布](/home/dwj2/DWJWendy.github.io/images/blog/9.item_pv-level.png){:height="50%" width=50%"}
+![价格分布](/images/blog/7.item_sales_level.png){:height="50%" width="50%"}![收藏分布](/images/blog/8.item_collected_level.png){:height="50%" width="50%"}![展示分布](/images/blog/9.item_pv-level.png){:height="50%" width=50%"}
 
 图1，可以看出**价格越高转化率先增加后降低，这与我们对电商平台的认知有关**，价格太低必然会让人觉得物品质量不佳，但是随着价格增加，购买会带来更高的风险，转化率自然会降低。图2收藏次数越高，购买的可能性越大，**收藏在电商市场的本质，就是商品入选了用户的购买集**，对相关商品综合排序后，收藏的商品更有可能转化。图3，总体趋势是**展示次数（广告效应）越多，购买率越高**。
 
@@ -145,12 +145,12 @@
 
 - 4.商店星级 | 评论数量  分布
 
-![商店星级](/home/dwj2/DWJWendy.github.io/images/blog/12.shop_star_level.png){:height="50%" width=50%"}![评论数量](/home/dwj2/DWJWendy.github.io/images/blog/11.shop_review_num_level.png){:height="50%" width="50%"}
+![商店星级](/images/blog/12.shop_star_level.png){:height="50%" width=50%"}![评论数量](/images/blog/11.shop_review_num_level.png){:height="50%" width="50%"}
 
 图1.商店星级差异不明显。图2.**评论数量居中的购买率更高**
 
 - 5 城市 | 商品标签 分布
-![城市](/home/dwj2/DWJWendy.github.io/images/blog/6.city_d.png){:height="50%" width=50%"}![商品](/home/dwj2/DWJWendy.github.io/images/blog/10.brand_d.png){:height="50%" width=50%"}
+![城市](/images/blog/6.city_d.png){:height="50%" width=50%"}![商品](/images/blog/10.brand_d.png){:height="50%" width=50%"}
 
 这两幅图是仅仅选择了高频的城市和商标分布，**可以看出城市和商品图，都有集中表现类，而商品更为明显**。
 
@@ -417,7 +417,7 @@ class SVDReduce(object):
 
 **实验框架如下：**
 
-![实验框架](/home/dwj2/DWJWendy.github.io/images/blog/2018-05-02-3.jpeg){:height="60%" width="60%"}
+![实验框架](/images/blog/2018-05-02-3.jpeg){:height="60%" width="60%"}
 一定是我写累了，因为喜欢花花绿绿，图上颜色就觉得特别开心幸福，O(∩_∩)O哈哈哈~
 
 **实验过程：**
@@ -893,7 +893,7 @@ class NeuralNetwork(object):
 |: -------: | :------ : |: -------: | :------ : |: -------: | :------ : |:------ : |
 |Loss|4.10158|1.015423|0.539459|0.09011|0.089561|0.046641|
 
-![](/home/dwj2/DWJWendy.github.io/images/blog/2018-05-02-2.png) 
+![](/images/blog/2018-05-02-2.png)
 
 **从上表可以看出逻辑回归|贝叶斯分类器|随机森林|简单感知器|CNN的结果，而我们提出的CNN算法在测试集上的效果为0.046641明显优于其他方法，然后我们却没能够得到最终的验证，哭死哭死。**
 
@@ -906,7 +906,7 @@ class NeuralNetwork(object):
 
 毕竟海贼王的女人是不会认输的，O(∩_∩)O哈哈哈~，下面奉上今日新作《海贼王 路飞》
 
-![路飞](/home/dwj2/DWJWendy.github.io/images/blog/2015-05-02-4.jpeg){:height="30%" width="30%"} 
+![路飞](/images/blog/2015-05-02-4.jpeg){:height="30%" width="30%"}
 
 ---
 
